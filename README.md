@@ -24,5 +24,28 @@ pip install opencv-python numpy matplotlib
 ```
 ## Step 3: Clone this Repository
 ```bash
-git clone https://github.com/ctch3ng/Camera-Pose-Estimation-Using-an-Aruco-Marker
+git clone https://github.com/ctch3ng/Camera-Pose-Estimation-Using-an-Aruco-Marker.git
 ```
+- Change directory
+```
+cd Camera-Pose-Estimation-Using-an-Aruco-Marker
+```
+## Step 4: Camera Calibration
+- Before running the main program, calibrate your camera using the provided `Image_Capture_Camera_Calibration.py` script.
+```
+python Image_Capture_Camera_Calibration.py
+```
+- A checkerboard will appear on the screen. Measure the size of a block (mm) on the screen and adjust the `SQUARE_SIZE_OS` constant in the script accordingly. (i.e. measure it, then hit Ctrl-C to terminate the program. Afterwards, update the parameter and then run the script again.)
+- The script will prompt you to capture 45 images by pressing `s` when the checkerboard is detected.
+- Once 45 images are captured, the program will compute the calibration matrix and save it in the `calib_data` folder.
+
+## Step 5: Run the Camera Pose Estimation Program
+- Run the `Camera_Pose_Estimation.py` script:
+```
+python Camera_Pose_Estimation.py
+```
+- The program will look for an Aruco marker with the attribute `DICT_5X5_1000`. A sample marker (`DICT_5X5_1000_ID2.png`) is provided in the repository.
+
+- Display the marker on a screen (with a white background) and point your webcam towards it.
+
+- You should see a 3D stick figure representing the camera’s position relative to the marker.
