@@ -22,6 +22,10 @@ conda activate py38_cv
 ```bash
 pip install opencv-python numpy matplotlib
 ```
+- Install `git` using `conda`:
+```bash
+conda install git
+```
 ## Step 3: Clone this Repository
 ```bash
 git clone https://github.com/ctch3ng/Camera-Pose-Estimation-Using-an-Aruco-Marker.git
