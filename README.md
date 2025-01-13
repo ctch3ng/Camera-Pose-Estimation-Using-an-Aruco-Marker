@@ -49,3 +49,7 @@ python Camera_Pose_Estimation.py
 - Display the marker on a screen (with a white background) and point your webcam towards it.
 
 - You should see a 3D stick figure representing the camera’s position relative to the marker.
+
+## Acknowledgements
+
+I would like to thank Chinmay Prashant Kashid and Peter George for their contributions to the earlier versions of this code. Additionally, credit goes to the repository [naruya/aruco](https://github.com/naruya/aruco) for inspiration and reference.
